@@ -70,3 +70,27 @@ Once compliant:
   - Elevation views (simple)
 - Optional: Image generation models create more realistic conceptual renders
 - A **Compliance Report** is produced explaining how the plan meets zoning requirements.
+
+## 🛠️ Proposed Tech Stack
+
+| Component              | Technology                              | Purpose                                      |
+|------------------------|-----------------------------------------|----------------------------------------------|
+| Core Language          | Python 3.11+                            | Main application logic                       |
+| Agent Framework        | LangGraph (or CrewAI / LangChain)       | Building the self-correction loop            |
+| LLM                    | OpenAI / Anthropic / Grok               | Plan generation + iterative fixing           |
+| Visualization          | Matplotlib + Pillow                     | 2D architectural drawings                    |
+| Image Generation       | Grok Imagine / Stable Diffusion API     | Optional photorealistic concept images       |
+| User Interface (v2)    | Streamlit or Gradio                     | Web interface for input and results          |
+| Zoning Data            | JSON + optional vector database         | Storing and retrieving municipal zoning laws |
+
+## 🚀 Getting Started (Planned)
+
+```bash
+git clone https://github.com/balark1234/building-plans-generation.git
+cd building-plans-generation
+pip install -r requirements.txt
+```
+
+Example run (future):
+```bash
+python main.py --location "Austin, TX" --dimensions "60x90" --stories 3 --type residential
