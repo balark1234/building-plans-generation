@@ -24,3 +24,8 @@ class BuildingVision(BaseModel):
     architectural_style: Optional[str] = None
     special_requirements: List[str] = Field(default_factory=list)
     description: Optional[str] = None
+
+    # Area-related requirements
+    expected_built_up_area_per_floor: Optional[float] = None
+    total_carpet_area: Optional[float] = None
+    total_built_up_area: Optional[float] = None
