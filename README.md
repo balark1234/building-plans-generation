@@ -126,3 +126,9 @@ building-plans-generation/
 - [ ] Streamlit web interface
 - [ ] Integration with image generation models
 - [ ] PDF export + compliance report generation
+
+## 🤝 Contributing
+Ideas and contributions are very welcome! Please open an issue to discuss new features or improvements.
+
+## 📄 License
+MIT License
