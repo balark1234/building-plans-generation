@@ -29,3 +29,22 @@ This project creates an intelligent system that turns your site information and 
   - Option for more realistic renders via image generation models
 - **Compliance Report**: Clear breakdown of how the final plan satisfies (or still violates) zoning regulations
 - **Extensible**: Easy to add support for new cities and zoning rule sets
+
+## 🔄 How It Works
+
+### 1. Input Collection
+The user provides two types of information:
+
+**A. Site Details**
+- Address or location
+- Plot dimensions (length × width)
+- Any known constraints (slope, existing structures, orientation, etc.)
+
+**B. Building Vision (Mind Map Style)**
+- Number of stories (e.g., 2 stories, 3 stories, up to 5+ stories)
+- Building type: Residential / Commercial / Mixed-use
+- High-level layout preferences (e.g., open-plan living, multiple bedrooms, ground-floor retail, rooftop terrace)
+- Elevation and style direction (modern, contemporary, traditional, specific roof form, materials)
+- Any special requirements (EV charging, accessibility, sustainability goals, parking needs, etc.)
+
+This combination acts like a **natural language project brief + structured parameters**.
