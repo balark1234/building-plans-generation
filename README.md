@@ -94,3 +94,35 @@ pip install -r requirements.txt
 Example run (future):
 ```bash
 python main.py --location "Austin, TX" --dimensions "60x90" --stories 3 --type residential
+```
+
+## 📁 Planned Project Structure
+
+```
+building-plans-generation/
+├── src/
+│   ├── agents/              # LLM agents and self-correction loop
+│   ├── zoning/              # Zoning law loader + validator
+│   ├── visualization/       # Matplotlib plan generators
+│   ├── inputs/              # Input parsing (site + vision)
+│   └── utils/
+├── data/
+│   └── zoning_laws/         # Sample zoning rules per city
+├── examples/
+├── tests/
+├── app.py                   # Future web UI
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+## 🗺️ Roadmap
+
+- [x] Repository created
+- [ ] Core input models (Site + Building Vision)
+- [ ] LLM self-correction loop with zoning validation
+- [ ] Matplotlib-based 2D plan visualizer
+- [ ] Support for 2–3 sample cities’ zoning laws
+- [ ] Streamlit web interface
+- [ ] Integration with image generation models
+- [ ] PDF export + compliance report generation
