@@ -11,3 +11,6 @@ class Site(BaseModel):
     slope: Optional[str] = None
     existing_structures: bool = False
     constraints: List[str] = Field(default_factory=list)
+    
+    # Extra site-specific information
+    additional_info: Optional[str] = None
