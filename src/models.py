@@ -14,3 +14,13 @@ class Site(BaseModel):
     
     # Extra site-specific information
     additional_info: Optional[str] = None
+
+
+class BuildingVision(BaseModel):
+    """Represents the user's desired building vision / mind map."""
+    number_of_stories: int
+    building_type: str
+    desired_layout: Optional[str] = None
+    architectural_style: Optional[str] = None
+    special_requirements: List[str] = Field(default_factory=list)
+    description: Optional[str] = None
