@@ -48,3 +48,25 @@ The user provides two types of information:
 - Any special requirements (EV charging, accessibility, sustainability goals, parking needs, etc.)
 
 This combination acts like a **natural language project brief + structured parameters**.
+
+### 2. Zoning Law Retrieval
+The system identifies the municipality from the location and loads the relevant zoning regulations (setbacks, height limits, Floor Area Ratio, parking requirements, use restrictions, etc.).
+
+### 3. Initial Plan Generation
+An LLM agent creates a first draft of the building layout, massing, and key decisions, along with reasoning tied to the user’s vision and zoning rules.
+
+### 4. Continuous Self-Correction Loop
+The system runs a validation + revision cycle:
+- A rule checker evaluates the current plan against all applicable zoning laws
+- Any violations are fed back to the LLM with specific feedback
+- The LLM revises the plan
+- This loop continues until the plan is compliant or a maximum iteration limit is reached
+
+### 5. Visualization & Output
+Once compliant:
+- **Matplotlib** generates clean, professional 2D drawings:
+  - Site plan with setbacks and building footprint
+  - Floor plans for each level
+  - Elevation views (simple)
+- Optional: Image generation models create more realistic conceptual renders
+- A **Compliance Report** is produced explaining how the plan meets zoning requirements.
